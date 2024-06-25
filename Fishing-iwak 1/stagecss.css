@@ -1,0 +1,156 @@
+body {
+    background-image: linear-gradient(to bottom, #4F6F52, #615EFC);
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 0.25px;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+    height: 101vh;
+    color: white;
+    overflow: hidden;
+}
+
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    text-align: center;
+    height: 95vh;
+    width: 100vw;
+}
+
+#text-wrapper1, #text-wrapper2 {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 20px;
+    border: 5px solid;
+    position: relative;
+    margin-bottom: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 250px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+#text-wrapper1 {
+    border-color: #4F6F52;
+    background-image: url("rawa.png");
+}
+
+#text-wrapper2 {
+    border-color: #615EFC;
+    background-image: url("images/laut.png");
+}
+
+#text-wrapper1:hover, #text-wrapper2:hover, #back-button:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+#back-button {
+    background-color: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 20px;
+    border: 5px solid #973131;
+    position: relative;
+    color: #973131;
+    font-size: 20px;
+    margin-top: 20px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 48px;
+    font-family: 'Fredoka One', cursive;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    color: white;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+a {
+    text-decoration: none;
+    color: #4F6F52;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #658147;
+}
+
+a:hover {
+    color: #658147;
+}
+
+#bubbles {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bubbles div {
+    border: solid 2px #73A9E6;
+    border-radius: 100%;
+    position: absolute;
+    visibility: hidden;
+    animation: bubble 10s infinite;
+}
+
+@keyframes bubble {
+    from {
+        bottom: -24px;
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        bottom: 120%;
+        opacity: 0;
+    }
+}
+
+.fish {
+    position: absolute;
+    width: 50px;
+    height: 30px;
+    background-image: url('images/fish.png');
+    background-size: cover;
+    animation: swim 6s linear infinite;
+}
+
+@keyframes swim {
+    from {
+        left: -10%;
+    }
+    to {
+        left: 110%;
+    }
+}
+
+#pond {
+    position: absolute;
+    bottom: 5%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    height: 10%;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 50%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
