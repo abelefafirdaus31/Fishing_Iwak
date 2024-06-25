@@ -1,0 +1,100 @@
+body {
+    background-image: linear-gradient(to bottom, #7b890f, #125e84);
+    font-family: 'Patrick Hand', cursive;
+    letter-spacing: 0.25px;
+    font-size: 21px;
+    margin: 0;
+    padding: 0;
+    height: 101vh;
+    color: white;
+}
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    text-align: center;
+    height: 95vh;
+    width: 100vw;
+}
+#text-wrapper1 {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 20px;
+    border: 15px ridge #727d1e;
+    position: relative;
+    margin-bottom: 100px;
+    background-image: url("images/background1.png");
+    background-size: 170px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 40px;
+    
+}
+#text-wrapper2 {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 20px;
+    border: 4mm ridge #4B70F5;
+    position: relative;
+    margin-bottom: 100px;
+    background-image: url("images/laut.png");
+    background-size: 170px;
+    background-repeat: no-repeat;
+    width: 150px;
+    height: 40px;
+}
+#text-wrapper1:hover,
+#text-wrapper2:hover,
+#back-button:hover {
+    transform: scale(1.1);
+}
+
+#back-button {
+    background-color: rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    border-radius: 20px;
+    border: 5px solid #C80036;
+    position: relative;
+    color: #C80036;
+}
+h1 {
+    margin-bottom: 30px;
+}
+a {
+    text-decoration: none;
+    color: #727d1e;
+    font-weight: bold;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif; 
+    transition: color 0.3s ease; 
+}
+#bubbles {
+    width: 100%;    
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+#bubbles div {
+    border: solid 2px #909c29;
+    border-radius: 100%;
+    position: absolute;
+    visibility: hidden;
+    animation: fade 10s infinite;
+}
+
+@keyframes fade {
+    from {
+        bottom: -24px;
+        opacity: 1;
+        visibility: visible;
+    }
+    to {
+        bottom: 120%;
+    }
+}
